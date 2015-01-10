@@ -1,0 +1,223 @@
+﻿
+nuget {
+	nuspec {
+		id = sfml-system;
+        version : 2.2.0.1;
+        title: sfml-system;
+        authors: {Laurent Gomila};
+        owners: {Laurent Gomila};
+        licenseUrl: "http://www.sfml-dev.org/license.php";
+        projectUrl: "http://www.sfml-dev.org";
+        iconUrl: "http://www.sfml-dev.org/images/sfml-icon.png";
+        requireLicenseAcceptance:false;
+        summary: "SFML provides a simple interface to the various components of your PC, to ease the development of games and multimedia applications. It is composed of five modules: system, window, graphics, audio and network.";
+
+        description: @"SFML provides a simple interface to the various components
+		of your PC, to ease the development of games and multimedia applications.
+		It is composed of five modules: system, window, graphics, audio and network.
+
+        With SFML, your application can compile and run out of the box on the most
+		common operating systems: Windows, Linux, Mac OS X and soon Android & iOS.
+
+        SFML has official bindings for the C and .Net languages. And thanks to its
+		active community, it is also available in many other languages such as Java,
+		Ruby, Python, Go, and more.";
+        releaseNotes: "Release of SFML 2.1 libraries.";
+        copyright: Copyright 2013;
+        tags: { sfml, native, CoApp };
+    }
+	
+	#output-packages {
+		default : ${pkgname};
+		redist : ${pkgname}.redist;
+		symbols : ${pkgname}.symbols;
+	}
+	
+	files {
+		#defines {
+			SRC = sources\;
+		}
+		
+		nestedInclude: {
+			#destination = ${d_include};
+			"${SRC}include\**",
+			"${SRC}ext\headers\**"
+		};
+
+		docs: { "${SRC}doc\**" };
+
+		
+		[x86,v100,debug] {
+			lib += ${SRC}bin\x86\v100\debug\lib\sfml-main-d.lib;
+		}
+						
+		[x86,v100,release] {
+			lib += ${SRC}bin\x86\v100\release\lib\sfml-main.lib;
+		}
+						
+		[x86,v110,debug] {
+			lib += ${SRC}bin\x86\v110\debug\lib\sfml-main-d.lib;
+		}
+						
+		[x86,v110,release] {
+			lib += ${SRC}bin\x86\v110\release\lib\sfml-main.lib;
+		}
+						
+		[x86,v120,debug] {
+			lib += ${SRC}bin\x86\v120\debug\lib\sfml-main-d.lib;
+		}
+						
+		[x86,v120,release] {
+			lib += ${SRC}bin\x86\v120\release\lib\sfml-main.lib;
+		}
+						
+		[x64,v100,debug] {
+			lib += ${SRC}bin\x64\v100\debug\lib\sfml-main-d.lib;
+		}
+						
+		[x64,v100,release] {
+			lib += ${SRC}bin\x64\v100\release\lib\sfml-main.lib;
+		}
+						
+		[x64,v110,debug] {
+			lib += ${SRC}bin\x64\v110\debug\lib\sfml-main-d.lib;
+		}
+						
+		[x64,v110,release] {
+			lib += ${SRC}bin\x64\v110\release\lib\sfml-main.lib;
+		}
+						
+		[x64,v120,debug] {
+			lib += ${SRC}bin\x64\v120\debug\lib\sfml-main-d.lib;
+		}
+						
+		[x64,v120,release] {
+			lib += ${SRC}bin\x64\v120\release\lib\sfml-main.lib;
+		}
+						
+		[x86,v100,debug,static] {
+			lib += ${SRC}bin\x86\v100\debug\lib\sfml-system-s-d.lib;
+			}
+						
+		[x86,v100,release,static] {
+			lib += ${SRC}bin\x86\v100\release\lib\sfml-system-s.lib;
+			}
+						
+		[x86,v110,debug,static] {
+			lib += ${SRC}bin\x86\v110\debug\lib\sfml-system-s-d.lib;
+			}
+						
+		[x86,v110,release,static] {
+			lib += ${SRC}bin\x86\v110\release\lib\sfml-system-s.lib;
+			}
+						
+		[x86,v120,debug,static] {
+			lib += ${SRC}bin\x86\v120\debug\lib\sfml-system-s-d.lib;
+			}
+						
+		[x86,v120,release,static] {
+			lib += ${SRC}bin\x86\v120\release\lib\sfml-system-s.lib;
+			}
+						
+		[x86,v100,debug,dynamic] {
+			lib += ${SRC}bin\x86\v100\debug\lib\sfml-system-d.lib;
+			bin += ${SRC}bin\x86\v100\debug\bin\sfml-system-d-2.dll;
+			}
+						
+		[x86,v100,release,dynamic] {
+			lib += ${SRC}bin\x86\v100\release\lib\sfml-system.lib;
+			bin += ${SRC}bin\x86\v100\release\bin\sfml-system-2.dll;
+			}
+						
+		[x86,v110,debug,dynamic] {
+			lib += ${SRC}bin\x86\v110\debug\lib\sfml-system-d.lib;
+			bin += ${SRC}bin\x86\v110\debug\bin\sfml-system-d-2.dll;
+			}
+						
+		[x86,v110,release,dynamic] {
+			lib += ${SRC}bin\x86\v110\release\lib\sfml-system.lib;
+			bin += ${SRC}bin\x86\v110\release\bin\sfml-system-2.dll;
+			}
+						
+		[x86,v120,debug,dynamic] {
+			lib += ${SRC}bin\x86\v120\debug\lib\sfml-system-d.lib;
+			bin += ${SRC}bin\x86\v120\debug\bin\sfml-system-d-2.dll;
+			}
+						
+		[x86,v120,release,dynamic] {
+			lib += ${SRC}bin\x86\v120\release\lib\sfml-system.lib;
+			bin += ${SRC}bin\x86\v120\release\bin\sfml-system-2.dll;
+			}
+						
+		[x64,v100,debug,static] {
+			lib += ${SRC}bin\x64\v100\debug\lib\sfml-system-s-d.lib;
+			}
+						
+		[x64,v100,release,static] {
+			lib += ${SRC}bin\x64\v100\release\lib\sfml-system-s.lib;
+			}
+						
+		[x64,v110,debug,static] {
+			lib += ${SRC}bin\x64\v110\debug\lib\sfml-system-s-d.lib;
+			}
+						
+		[x64,v110,release,static] {
+			lib += ${SRC}bin\x64\v110\release\lib\sfml-system-s.lib;
+			}
+						
+		[x64,v120,debug,static] {
+			lib += ${SRC}bin\x64\v120\debug\lib\sfml-system-s-d.lib;
+			}
+						
+		[x64,v120,release,static] {
+			lib += ${SRC}bin\x64\v120\release\lib\sfml-system-s.lib;
+			}
+						
+		[x64,v100,debug,dynamic] {
+			lib += ${SRC}bin\x64\v100\debug\lib\sfml-system-d.lib;
+			bin += ${SRC}bin\x64\v100\debug\bin\sfml-system-d-2.dll;
+			}
+						
+		[x64,v100,release,dynamic] {
+			lib += ${SRC}bin\x64\v100\release\lib\sfml-system.lib;
+			bin += ${SRC}bin\x64\v100\release\bin\sfml-system-2.dll;
+			}
+						
+		[x64,v110,debug,dynamic] {
+			lib += ${SRC}bin\x64\v110\debug\lib\sfml-system-d.lib;
+			bin += ${SRC}bin\x64\v110\debug\bin\sfml-system-d-2.dll;
+			}
+						
+		[x64,v110,release,dynamic] {
+			lib += ${SRC}bin\x64\v110\release\lib\sfml-system.lib;
+			bin += ${SRC}bin\x64\v110\release\bin\sfml-system-2.dll;
+			}
+						
+		[x64,v120,debug,dynamic] {
+			lib += ${SRC}bin\x64\v120\debug\lib\sfml-system-d.lib;
+			bin += ${SRC}bin\x64\v120\debug\bin\sfml-system-d-2.dll;
+			}
+						
+		[x64,v120,release,dynamic] {
+			lib += ${SRC}bin\x64\v120\release\lib\sfml-system.lib;
+			bin += ${SRC}bin\x64\v120\release\bin\sfml-system-2.dll;
+			}
+								
+		[x86] {
+			lib += ${SRC}ext\libs\x86\*.lib;
+			bin += ${SRC}ext\bin\x86\*.dll;
+		}
+
+		[x64] {
+			lib += ${SRC}ext\libs\x64\*.lib;
+			bin += ${SRC}ext\bin\x64\*.dll;
+		}
+		
+		};
+	
+	targets {
+		Defines += HAS_SFML;
+		[static]
+			Defines += SFML_STATIC;
+	}
+}
