@@ -1,8 +1,7 @@
-﻿
-nuget {
+﻿nuget {
 	nuspec {
 		id = sfml-network;
-        version : 2.2.0.1;
+        version : 2.3.0.0;
         title: sfml-network;
         authors: {Laurent Gomila};
         owners: {Laurent Gomila};
@@ -22,7 +21,7 @@ nuget {
         SFML has official bindings for the C and .Net languages. And thanks to its
 		active community, it is also available in many other languages such as Java,
 		Ruby, Python, Go, and more.";
-        releaseNotes: "Release of SFML 2.1 libraries.";
+        releaseNotes: "Release of SFML 2.3 libraries.";
         copyright: Copyright 2013;
         tags: { sfml, native, CoApp };
     }
@@ -35,7 +34,7 @@ nuget {
 
 	dependencies {
 		packages : {
-			sfml-system/2.2.0.1
+			sfml-system/2.3.0.0
 		};
 	}
 	
@@ -43,116 +42,115 @@ nuget {
 		#defines {
 			SRC = sources\;
 		}
-		
-		
+
 		[x86,v100,debug,static] {
 			lib += ${SRC}bin\x86\v100\debug\lib\sfml-network-s-d.lib;
-			}
-						
+		}
+
 		[x86,v100,release,static] {
 			lib += ${SRC}bin\x86\v100\release\lib\sfml-network-s.lib;
-			}
-						
+		}
+
 		[x86,v110,debug,static] {
 			lib += ${SRC}bin\x86\v110\debug\lib\sfml-network-s-d.lib;
-			}
-						
+		}
+
 		[x86,v110,release,static] {
 			lib += ${SRC}bin\x86\v110\release\lib\sfml-network-s.lib;
-			}
-						
+		}
+
 		[x86,v120,debug,static] {
 			lib += ${SRC}bin\x86\v120\debug\lib\sfml-network-s-d.lib;
-			}
-						
+		}
+
 		[x86,v120,release,static] {
 			lib += ${SRC}bin\x86\v120\release\lib\sfml-network-s.lib;
-			}
-						
+		}
+
 		[x86,v100,debug,dynamic] {
 			lib += ${SRC}bin\x86\v100\debug\lib\sfml-network-d.lib;
 			bin += ${SRC}bin\x86\v100\debug\bin\sfml-network-d-2.dll;
-			}
-						
+		}
+
 		[x86,v100,release,dynamic] {
 			lib += ${SRC}bin\x86\v100\release\lib\sfml-network.lib;
 			bin += ${SRC}bin\x86\v100\release\bin\sfml-network-2.dll;
-			}
-						
+		}
+
 		[x86,v110,debug,dynamic] {
 			lib += ${SRC}bin\x86\v110\debug\lib\sfml-network-d.lib;
 			bin += ${SRC}bin\x86\v110\debug\bin\sfml-network-d-2.dll;
-			}
-						
+		}
+
 		[x86,v110,release,dynamic] {
 			lib += ${SRC}bin\x86\v110\release\lib\sfml-network.lib;
 			bin += ${SRC}bin\x86\v110\release\bin\sfml-network-2.dll;
-			}
-						
+		}
+
 		[x86,v120,debug,dynamic] {
 			lib += ${SRC}bin\x86\v120\debug\lib\sfml-network-d.lib;
 			bin += ${SRC}bin\x86\v120\debug\bin\sfml-network-d-2.dll;
-			}
-						
+		}
+
 		[x86,v120,release,dynamic] {
 			lib += ${SRC}bin\x86\v120\release\lib\sfml-network.lib;
 			bin += ${SRC}bin\x86\v120\release\bin\sfml-network-2.dll;
-			}
-						
+		}
+
 		[x64,v100,debug,static] {
 			lib += ${SRC}bin\x64\v100\debug\lib\sfml-network-s-d.lib;
-			}
-						
+		}
+
 		[x64,v100,release,static] {
 			lib += ${SRC}bin\x64\v100\release\lib\sfml-network-s.lib;
-			}
-						
+		}
+
 		[x64,v110,debug,static] {
 			lib += ${SRC}bin\x64\v110\debug\lib\sfml-network-s-d.lib;
-			}
-						
+		}
+
 		[x64,v110,release,static] {
 			lib += ${SRC}bin\x64\v110\release\lib\sfml-network-s.lib;
-			}
-						
+		}
+
 		[x64,v120,debug,static] {
 			lib += ${SRC}bin\x64\v120\debug\lib\sfml-network-s-d.lib;
-			}
-						
+		}
+
 		[x64,v120,release,static] {
 			lib += ${SRC}bin\x64\v120\release\lib\sfml-network-s.lib;
-			}
-						
+		}
+
 		[x64,v100,debug,dynamic] {
 			lib += ${SRC}bin\x64\v100\debug\lib\sfml-network-d.lib;
 			bin += ${SRC}bin\x64\v100\debug\bin\sfml-network-d-2.dll;
-			}
-						
+		}
+
 		[x64,v100,release,dynamic] {
 			lib += ${SRC}bin\x64\v100\release\lib\sfml-network.lib;
 			bin += ${SRC}bin\x64\v100\release\bin\sfml-network-2.dll;
-			}
-						
+		}
+
 		[x64,v110,debug,dynamic] {
 			lib += ${SRC}bin\x64\v110\debug\lib\sfml-network-d.lib;
 			bin += ${SRC}bin\x64\v110\debug\bin\sfml-network-d-2.dll;
-			}
-						
+		}
+
 		[x64,v110,release,dynamic] {
 			lib += ${SRC}bin\x64\v110\release\lib\sfml-network.lib;
 			bin += ${SRC}bin\x64\v110\release\bin\sfml-network-2.dll;
-			}
-						
+		}
+
 		[x64,v120,debug,dynamic] {
 			lib += ${SRC}bin\x64\v120\debug\lib\sfml-network-d.lib;
 			bin += ${SRC}bin\x64\v120\debug\bin\sfml-network-d-2.dll;
-			}
-						
+		}
+
 		[x64,v120,release,dynamic] {
 			lib += ${SRC}bin\x64\v120\release\lib\sfml-network.lib;
 			bin += ${SRC}bin\x64\v120\release\bin\sfml-network-2.dll;
-			}
-						};
+		}
+	};
 	
 	targets {
 		Defines += HAS_SFML;

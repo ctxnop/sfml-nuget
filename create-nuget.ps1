@@ -6,3 +6,4 @@ Foreach-Object{
 }
 Remove-Item *.symbols.*
 cd ..
+pause

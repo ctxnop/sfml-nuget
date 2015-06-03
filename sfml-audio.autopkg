@@ -1,8 +1,7 @@
-﻿
-nuget {
+﻿nuget {
 	nuspec {
 		id = sfml-audio;
-        version : 2.2.0.1;
+        version : 2.3.0.0;
         title: sfml-audio;
         authors: {Laurent Gomila};
         owners: {Laurent Gomila};
@@ -22,7 +21,7 @@ nuget {
         SFML has official bindings for the C and .Net languages. And thanks to its
 		active community, it is also available in many other languages such as Java,
 		Ruby, Python, Go, and more.";
-        releaseNotes: "Release of SFML 2.1 libraries.";
+        releaseNotes: "Release of SFML 2.3 libraries.";
         copyright: Copyright 2013;
         tags: { sfml, native, CoApp };
     }
@@ -35,7 +34,7 @@ nuget {
 
 	dependencies {
 		packages : {
-			sfml-system/2.2.0.1
+			sfml-system/2.3.0.0
 		};
 	}
 	
@@ -44,129 +43,123 @@ nuget {
 			SRC = sources\;
 		}
 		
-		
 		[x86,v100,debug,static] {
 			lib += ${SRC}bin\x86\v100\debug\lib\sfml-audio-s-d.lib;
-			}
+		}
 						
 		[x86,v100,release,static] {
 			lib += ${SRC}bin\x86\v100\release\lib\sfml-audio-s.lib;
-			}
+		}
 						
 		[x86,v110,debug,static] {
 			lib += ${SRC}bin\x86\v110\debug\lib\sfml-audio-s-d.lib;
-			}
+		}
 						
 		[x86,v110,release,static] {
 			lib += ${SRC}bin\x86\v110\release\lib\sfml-audio-s.lib;
-			}
+		}
 						
 		[x86,v120,debug,static] {
 			lib += ${SRC}bin\x86\v120\debug\lib\sfml-audio-s-d.lib;
-			}
+		}
 						
 		[x86,v120,release,static] {
 			lib += ${SRC}bin\x86\v120\release\lib\sfml-audio-s.lib;
-			}
+		}
 						
 		[x86,v100,debug,dynamic] {
 			lib += ${SRC}bin\x86\v100\debug\lib\sfml-audio-d.lib;
 			bin += ${SRC}bin\x86\v100\debug\bin\sfml-audio-d-2.dll;
-			}
+		}
 						
 		[x86,v100,release,dynamic] {
 			lib += ${SRC}bin\x86\v100\release\lib\sfml-audio.lib;
 			bin += ${SRC}bin\x86\v100\release\bin\sfml-audio-2.dll;
-			}
+		}
 						
 		[x86,v110,debug,dynamic] {
 			lib += ${SRC}bin\x86\v110\debug\lib\sfml-audio-d.lib;
 			bin += ${SRC}bin\x86\v110\debug\bin\sfml-audio-d-2.dll;
-			}
+		}
 						
 		[x86,v110,release,dynamic] {
 			lib += ${SRC}bin\x86\v110\release\lib\sfml-audio.lib;
 			bin += ${SRC}bin\x86\v110\release\bin\sfml-audio-2.dll;
-			}
+		}
 						
 		[x86,v120,debug,dynamic] {
 			lib += ${SRC}bin\x86\v120\debug\lib\sfml-audio-d.lib;
 			bin += ${SRC}bin\x86\v120\debug\bin\sfml-audio-d-2.dll;
-			}
+		}
 						
 		[x86,v120,release,dynamic] {
 			lib += ${SRC}bin\x86\v120\release\lib\sfml-audio.lib;
 			bin += ${SRC}bin\x86\v120\release\bin\sfml-audio-2.dll;
-			}
+		}
 						
 		[x64,v100,debug,static] {
 			lib += ${SRC}bin\x64\v100\debug\lib\sfml-audio-s-d.lib;
-			}
+		}
 						
 		[x64,v100,release,static] {
 			lib += ${SRC}bin\x64\v100\release\lib\sfml-audio-s.lib;
-			}
+		}
 						
 		[x64,v110,debug,static] {
 			lib += ${SRC}bin\x64\v110\debug\lib\sfml-audio-s-d.lib;
-			}
+		}
 						
 		[x64,v110,release,static] {
 			lib += ${SRC}bin\x64\v110\release\lib\sfml-audio-s.lib;
-			}
+		}
 						
 		[x64,v120,debug,static] {
 			lib += ${SRC}bin\x64\v120\debug\lib\sfml-audio-s-d.lib;
-			}
+		}
 						
 		[x64,v120,release,static] {
 			lib += ${SRC}bin\x64\v120\release\lib\sfml-audio-s.lib;
-			}
+		}
 						
 		[x64,v100,debug,dynamic] {
 			lib += ${SRC}bin\x64\v100\debug\lib\sfml-audio-d.lib;
 			bin += ${SRC}bin\x64\v100\debug\bin\sfml-audio-d-2.dll;
-			}
+		}
 						
 		[x64,v100,release,dynamic] {
 			lib += ${SRC}bin\x64\v100\release\lib\sfml-audio.lib;
 			bin += ${SRC}bin\x64\v100\release\bin\sfml-audio-2.dll;
-			}
+		}
 						
 		[x64,v110,debug,dynamic] {
 			lib += ${SRC}bin\x64\v110\debug\lib\sfml-audio-d.lib;
 			bin += ${SRC}bin\x64\v110\debug\bin\sfml-audio-d-2.dll;
-			}
+		}
 						
 		[x64,v110,release,dynamic] {
 			lib += ${SRC}bin\x64\v110\release\lib\sfml-audio.lib;
 			bin += ${SRC}bin\x64\v110\release\bin\sfml-audio-2.dll;
-			}
+		}
 						
 		[x64,v120,debug,dynamic] {
 			lib += ${SRC}bin\x64\v120\debug\lib\sfml-audio-d.lib;
 			bin += ${SRC}bin\x64\v120\debug\bin\sfml-audio-d-2.dll;
-			}
+		}
 						
 		[x64,v120,release,dynamic] {
 			lib += ${SRC}bin\x64\v120\release\lib\sfml-audio.lib;
 			bin += ${SRC}bin\x64\v120\release\bin\sfml-audio-2.dll;
-			}
+		}
 								
 		[x86] {
-			lib += ${SRC}ext\libs\x86\openal32.lib;
-			lib += ${SRC}ext\libs\x86\sndfile.lib;
+			lib += ${SRC}ext\lib\x86\openal32.lib;
 			bin += ${SRC}ext\bin\x86\openal32.dll;
-			bin += ${SRC}ext\bin\x86\libsndfile-1.dll;
 		}
 		
 		[x64] {
-			lib += ${SRC}ext\libs\x64\openal32.lib;
-			lib += ${SRC}ext\libs\x64\sndfile.lib;
+			lib += ${SRC}ext\lib\x64\openal32.lib;
 			bin += ${SRC}ext\bin\x64\openal32.dll;
-			bin += ${SRC}ext\bin\x64\libsndfile-1.dll;
 		}
-		
 	};
 	
 	targets {
