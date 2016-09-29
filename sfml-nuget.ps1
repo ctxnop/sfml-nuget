@@ -4,11 +4,11 @@
 # SFML nuget packages generation variable
 $sfml_module_list = "system", "window", "graphics", "audio", "network"
 $sfml_dowbload_url = "http://www.sfml-dev.org/files/"
-$sfml_msvc_versions = "vc10", "vc11", "vc12", "vc14"
+$sfml_msvc_versions = "vc11", "vc12", "vc14"
 $sfml_platforms_bits = "32", "64"
-$sfml_version = "2.3.2"
+$sfml_version = "2.4.0"
 $platforms = "x86", "x64"
-$toolchains = "v100", "v110", "v120", "v140"
+$toolchains = "v110", "v120", "v140"
 $configurations = "debug", "release"
 $linking = "static", "dynamic"
 $dependencies = @{}
