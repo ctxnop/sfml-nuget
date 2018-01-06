@@ -8,7 +8,7 @@ Create NuGet's package for SFML.
 # How to
 
 You just have to run the sfml-nuget.ps1 script in a powershell instance.
-It will download eash needed files and output nupkg files in the "repository" folder.
+It will download each needed files and output nupkg files in the "repository" folder.
 
 Optional :
 You may want to modify some variables to select the sfml version, generate only specific modules, etc... (You should know what your are doing, I won't answer any question about custom packages).
