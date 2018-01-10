@@ -8,7 +8,7 @@ $sfml_msvc_versions = "vc11", "vc12", "vc14"
 $sfml_platforms_bits = "32", "64"
 $sfml_version = "2.4.2"
 $platforms = "x86", "x64"
-$toolchains = "v110", "v120", "v140"
+$toolchains = "v110", "v120", "v140", "v141"
 $configurations = "debug", "release"
 $linking = "static", "dynamic"
 $dependencies = @{}
@@ -46,7 +46,7 @@ function PackageHeader($pkgName)
 	UserPlatformToolset {
 	    // Needed because autopackage lacks VS2015 support
         	key = ""PlatformToolset"";
-        	choices: ""v100,v110,v120,v140"";
+        	choices: ""v100,v110,v120,v140,v141"";
 	};
 }
 
@@ -82,10 +82,14 @@ function AddMainFile()
 	{
 		foreach($v in $toolchains)
 		{
+			$v1=$v
+            if($v -eq 'v141'){
+                $v1='v140'
+            }
 			foreach($c in $configurations)
 			{
 					$datas += "		[$p,$v,$c] {"
-					$libfile = "			lib += `${SRC}bin\$p\$v\$c\lib\sfml-main"
+					$libfile = "			lib += `${SRC}bin\$p\$v1\$c\lib\sfml-main"
 					if ($c -eq "debug")
 					{
 						$libfile += "-d"
@@ -109,13 +113,17 @@ function AddFiles($pkgName)
 	{
 		foreach($v in $toolchains)
 		{
+            $v1=$v
+            if($v -eq 'v141'){
+                $v1='v140'
+            }
 			foreach($c in $configurations)
 			{
 				foreach($l in $linking)
 				{
 					$datas += "		[$p,$v,$c,$l] {"
-					$libfile = "			lib += `${SRC}bin\$p\$v\$c\lib\sfml-$pkgName"
-					$binfile = "			bin += `${SRC}bin\$p\$v\$c\bin\sfml-$pkgName"
+					$libfile = "			lib += `${SRC}bin\$p\$v1\$c\lib\sfml-$pkgName"
+					$binfile = "			bin += `${SRC}bin\$p\$v1\$c\bin\sfml-$pkgName"
 					if ($l -eq "static")
 					{
 						$libfile += "-s"
